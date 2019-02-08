@@ -7,7 +7,7 @@ info:
   title: Developer Services documentation
 tags:
   - name: Developer Service Operations
-    description: Developer Service operations- updated once again
+    description: Developer Service operations- updated once
 paths:
   /apiUsage:
     get:
