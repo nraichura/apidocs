@@ -1,0 +1,120 @@
+openapi: 3.0.0
+info:
+  description: >-
+    Developer Services APIs : External developers can check their api usage and
+    build their own dashboards
+  version: "1.0.0-oas3"
+  title: Developer Services documentation
+tags:
+  - name: Developer Service Operations
+    description: Developer Service operations- updated
+paths:
+  /apiUsage:
+    get:
+      tags:
+        - Developer Service Operations
+      summary: Get Api usage for a developer
+      description: Developer calling this api can get his usage
+      operationId: getApiUsage
+      parameters:
+        - name: X-PB-TransactionID
+          in: header
+          description: Transaction Id
+          required: true
+          schema:
+            type: string
+        - name: Authorization
+          in: header
+          description: Bearer token required for the Authorization
+          required: true
+          schema:
+            type: string
+        - name: fromDate
+          in: query
+          description: From Date
+          required: true
+          schema:
+            type: string
+        - name: toDate
+          in: query
+          description: To Date
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiUsageResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResp'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResp'
+servers:
+  - url: 'https://api-qa.pitneybowes.com/developerServices'
+components:
+  schemas:
+    ErrorResp:
+      properties:
+        errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/ErrorInfo'
+    ErrorInfo:
+      properties:
+        errorCode:
+          type: string
+        errorDescription:
+          type: string
+    ApiUsageResponse:
+      properties:
+        totalCreditsUsed:
+          type: number
+        totalCallCount:
+          type: number
+        fromDate:
+          type: number
+        toDate:
+          type: number
+        planUsageDetails:
+          type: array
+          items:
+            $ref: '#/components/schemas/PlanUsageDetails'
+    PlanUsageDetails:
+      properties:
+        planName:
+          type: string
+        isFreePlan:
+          type: boolean
+        quota:
+          type: number
+        quotaTerm:
+          type: string
+        termUnit:
+          type: number
+        planUsageCount:
+          type: number
+        planCreditsUsed:
+          type: number
+        endpoints:
+          type: array
+          items:
+            $ref: '#/components/schemas/ApiProductUsageDetails'
+    ApiProductUsageDetails:
+      properties:
+        apiProductName:
+          type: string
+        billableCallCount:
+          type: number
+        creditsUsed:
+          type: number
