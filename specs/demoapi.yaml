@@ -83,7 +83,7 @@ components:
       properties:
         totalCreditsUsed:
           type: number
-          description: "ravi is annoying"
+          description: "ravi is clever"
         totalCallCount:
           type: number
         fromDate:
