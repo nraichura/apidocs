@@ -23,7 +23,6 @@ paths:
           required: true
           schema:
             type: string
-          x-example: 123
         - name: Authorization
           in: header
           description: Bearer token required for the Authorization
@@ -36,7 +35,6 @@ paths:
           required: true
           schema:
             type: string
-          x-example: 2018-12-10
         - name: toDate
           in: query
           description: To Date
