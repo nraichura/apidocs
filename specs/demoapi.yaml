@@ -64,7 +64,7 @@ servers:
 # Added by API Auto Mocking Plugin
   - description: SwaggerHub API Auto Mocking
     url: https://virtserver.swaggerhub.com/pb-demo/pb-demo-api/1.0.0-oas3
-  - url: 'https://virtual.api-qa.pitneybowes.com/developerServices'
+  - url: 'https://api-qa.pitneybowes.com/developerServices'
 components:
   schemas:
     ErrorResp:
