@@ -48,9 +48,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ApiUsageResponse'
-              example: {
-                "abc":"xyz"
-              }
         '400':
           description: Bad Request
           content:
