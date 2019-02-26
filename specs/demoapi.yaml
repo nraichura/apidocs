@@ -61,7 +61,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResp'
 servers:
-  - url: 'https://api-qa.pitneybowes.com/developerServices'
+  - url: 'https://virtual.api-qa.pitneybowes.com/developerServices'
 components:
   schemas:
     ErrorResp:
