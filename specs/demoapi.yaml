@@ -23,6 +23,7 @@ paths:
           required: true
           schema:
             type: string
+          x-example: 123
         - name: Authorization
           in: header
           description: Bearer token required for the Authorization
