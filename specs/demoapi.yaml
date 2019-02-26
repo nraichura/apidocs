@@ -72,13 +72,7 @@ components:
         errors:
           type: array
           items:
-            $ref: '#/components/schemas/ErrorInfo'
-    ErrorInfo:
-      properties:
-        errorCode:
-          type: string
-        errorDescription:
-          type: string
+            $ref: 'https://api.swaggerhub.com/apis/pb-demo/petstore-test/1.0.0#/components/schemas/ErrorInfo'
     ApiUsageResponse:
       properties:
         totalCreditsUsed:
