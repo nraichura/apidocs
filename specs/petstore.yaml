@@ -640,6 +640,13 @@ components:
             - sold
       xml:
         name: Pet
+    ErrorInfo:
+      type: object
+      properties:
+        errorCode:
+          type: string
+        errorDescription:
+          type: string
     ApiResponse:
       type: object
       properties:
