@@ -67,30 +67,28 @@ paths:
                 $ref: '#/components/schemas/ErrorResp'
       requestBody:
         content:
-      'application/json':
-        schema:
-        $ref: '#/components/schemas/PlanUsageDetails'
-        examples:
-          foo:
-            value: |
-                  {
-                    "planName": "mockPlan1",
-                    "isFreePlan": false,
-                    "quota": 500,
-                    "quotaTerm": "string",
-                    "termUnit": 0,
-                    "planUsageCount": 0,
-                    "planCreditsUsed": 0,
-                    "endpoints": [
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PlanUsageDetails'
+            examples:
+              foo:
+                value: |
                       {
-                        "apiProductName": "string",
-                        "billableCallCount": 0,
-                        "creditsUsed": 0
+                        "planName": "mockPlan1",
+                        "isFreePlan": false,
+                        "quota": 500,
+                        "quotaTerm": "string",
+                        "termUnit": 0,
+                        "planUsageCount": 0,
+                        "planCreditsUsed": 0,
+                        "endpoints": [
+                          {
+                            "apiProductName": "string",
+                            "billableCallCount": 0,
+                            "creditsUsed": 0
+                          }
+                        ]
                       }
-                    ]
-                  }
-          bar:
-            value: {"bar": "baz"}
 servers:
 # Added by API Auto Mocking Plugin
   - description: SwaggerHub API Auto Mocking
