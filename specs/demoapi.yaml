@@ -23,6 +23,7 @@ paths:
           required: true
           schema:
             type: string
+          example: 123
         - name: Authorization
           in: header
           description: Bearer token required for the Authorization
@@ -54,6 +55,10 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResp'
+              example: {"errors":[{
+                "errorCode": "PB-APIM-XXXX",
+                "errorDescription":"Example Error"
+              }]}
         '404':
           description: Not found
           content:
