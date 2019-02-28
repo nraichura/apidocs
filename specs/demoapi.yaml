@@ -70,10 +70,8 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/PlanUsageDetails'
-            examples:
-              foo:
-                value: |
-                      {
+            example: |
+              {
                         "planName": "mockPlan1",
                         "isFreePlan": false,
                         "quota": 500,
