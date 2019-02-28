@@ -70,23 +70,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/PlanUsageDetails'
-            example: |
-              {
-                        "planName": "mockPlan1",
-                        "isFreePlan": false,
-                        "quota": 500,
-                        "quotaTerm": "string",
-                        "termUnit": 0,
-                        "planUsageCount": 0,
-                        "planCreditsUsed": 0,
-                        "endpoints": [
-                          {
-                            "apiProductName": "string",
-                            "billableCallCount": 0,
-                            "creditsUsed": 0
-                          }
-                        ]
-                      }
+            examples: 
+              foo: 
+                value: {"key":"value"}
 servers:
 # Added by API Auto Mocking Plugin
   - description: SwaggerHub API Auto Mocking
