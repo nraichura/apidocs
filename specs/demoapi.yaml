@@ -49,23 +49,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ApiUsageResponse'
-              example: 
-                {
-                          "planName": "mockPlan1",
-                          "isFreePlan": false,
-                          "quota": 500,
-                          "quotaTerm": "month",
-                          "termUnit": 2,
-                          "planUsageCount": 100,
-                          "planCreditsUsed": 200,
-                          "endpoints": [
-                            {
-                              "apiProductName": "string",
-                              "billableCallCount": 125,
-                              "creditsUsed": 120
-                            }
-                          ]
-                        }
         '400':
           description: Bad Request
           content:
