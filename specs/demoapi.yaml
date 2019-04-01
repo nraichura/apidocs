@@ -43,7 +43,7 @@ paths:
           schema:
             type: string
       responses:
-        '500':
+        '200':
           description: successful operation
           content:
             application/json:
